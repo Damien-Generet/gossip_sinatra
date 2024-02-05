@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <title>The Gossip Project</title>
+  </head>
+  <body>
+    <h1>Mon super SUPER site de gossip, depuis le dossier views !</h1>
+    <a href="/gossips/new/">Créé un nouveau ragot sur tes camarades de THP !</a>
+
+    <% gossips.each_with_index do |gossip, i| %>
+      <p>
+        <a href="/gossips/<%=i + 1%>/">Gossip n°<%= i + 1 %></a>
+      </p>
+    <% end %>
+    
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title>The Gossip Project</title>
+  </head>
+  <body>
+  <h1>Voici un potin !</h1>
+
+<h3>Voici le potin n°<%= params["id"] %> </h3>  
+
+<p>Voici l'auteur du Popotin :</p>
+  <%= gossip_selected.author %>
+
+  <p>Et voici le popotin :</p>
+
+  <%= gossip_selected.content %>
+  </br>
+  </br>
+  </br>
+  <a href="/gossips/<%= params["id"]%>/edit/">Mets à jour ce ragot !</a>
+  </br>
+  </br>
+  </br>
+  <h3>Voici vos commentaires !</h3>
+
+  <h3>Ajoute un commentaire !</h3></br>
+
+  <form action='/gossips/<%= params["id"]%>/' method='POST'>
+  <p><label>Nouvrau commentaire :</label></p>
+  <p>Quel est ton nom ?</p><input type='text' name='user_comment'/><br/>
+  <p>Quel est ton commentaire ?</p><input type='text' name='comment'/><br/>
+  <input type='hidden' name='gossip_author'/><%=gossip_selected.author%><br/>
+  <input type='hidden' name='gossip_content'/><%=gossip_selected.content%><br/>
+  <br>
+  <input type="submit">
+</form>
+
+
+
+    
+  </body>
+</html>

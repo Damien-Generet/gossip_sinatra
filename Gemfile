@@ -1,0 +1,13 @@
+source 'https://rubygems.org/'
+ruby '3.2.2'
+gem 'pry'
+gem 'rspec'
+gem 'rubocop'
+gem 'nokogiri'
+gem 'open-uri'
+gem 'dotenv'
+gem 'sinatra'
+gem 'bundler'
+gem 'rackup'
+gem 'rerun'
+gem "csv", "~> 3.2"

@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>The Gossip Project</title>
+  </head>
+  <body>
+  <h1>Voici un potin !</h1>
+
+<h3>Voici le potin n°<%= params["id"] %> </h3>  
+
+
+<form action='/gossips/<%= params["id"]%>/edit/' method='POST'>
+  <p><label>Change your potin</label></p>
+  
+<input type='text' placeholder='<%= gossip_selected.content %>' name='update_content'/><br/>
+  <br>
+  <input type='text' name='update_author'/><br/>
+  <input type="submit">
+</form>
+
+
+  
+
+    
+  </body>
+</html>
