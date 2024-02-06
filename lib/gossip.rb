@@ -42,16 +42,4 @@ class Gossip
       end
     end
     end
-
-    def comment(comment, id, user_comment)
-        commented_gossip = Gossip.find(id)
-        update_gossip = []
-        CSV.read("./db/gossip.csv", "w").each_with_index do |csv, index|
-        if id.to_i - 1 == index
-          update_gossip << [commented_gossip, @comment]
-        else
-          update_gossip << csv
-        end
-      end
-    end
 end
