@@ -20,21 +20,18 @@
   </br>
   </br>
   </br>
-  <h3>Voici vos commentaires !</h3>
-
-  <h3>Ajoute un commentaire !</h3></br>
-
-  <form action='/gossips/<%= params["id"]%>/' method='POST'>
-  <p><label>Nouvrau commentaire :</label></p>
-  <p>Quel est ton nom ?</p><input type='text' name='user_comment'/><br/>
-  <p>Quel est ton commentaire ?</p><input type='text' name='comment'/><br/>
-  <input type='hidden' name='gossip_author'/><%=gossip_selected.author%><br/>
-  <input type='hidden' name='gossip_content'/><%=gossip_selected.content%><br/>
-  <br>
-  <input type="submit">
-</form>
-
-
+<h2> Comment on this gossip </h2>
+<% comments.each_with_index do |comment,index| %>
+    <p>Comment n°<%= index +1 %> :<br/><%= comment.comment %><br/>
+    </p>
+<% end %>
+<br/> <%#form for comment#%>
+<h3>Section Commentaire</h3>
+  <form action='/gossips/<%= params['id'] %>/' method='POST'>
+    Puts Ecris ton commentaire : <input type='text' name='gossip_comment'/>
+    <br/>
+    <input type='submit'/>
+  </form>
 
     
   </body>
